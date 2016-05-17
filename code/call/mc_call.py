@@ -34,6 +34,24 @@ def mc_call(S0, E, T, r, sig, numSim, numStep):
     
     print 'Monte Carlo Call Price : %.5f' % call
     print 'CPU time in Python(sec) : %.4f' % (t1-t0)
+    
+def mc_call_var_reduc(S0, E, T, r, sig, numSim, numStep):
+    dt = T / numStep;
+    t0 = time.clock();
+    z = np.random.normal(size = [numSim, numStep]);
+    sp = S0 * np.ones([numSim]);
+    sm = S0 * np.ones([numSim]);
+    for j in xrange(numStep):
+        sp[:] = sp[:] * np.exp((r - 0.5*sig**2)*dt + sig*sqrt(dt)*z[:, j]);
+        sm[:] = sm[:] * np.exp((r - 0.5*sig**2)*dt - sig*sqrt(dt)*z[:, j]);
+    payoff1 = np.maximum(sp - E, 0);
+    payoff2 = np.maximum(sm - E, 0);
+    call = exp(-r * T) * np.mean(0.5*(payoff1+payoff2));
+    t1 = time.clock();
+    del z;
+    
+    print 'Monte Carlo Call Price : %.5f' % call
+    print 'CPU time in Python(sec) : %.4f' % (t1-t0)
 
 S0 = 100.0; # underlying price
 E = 100.0; # strike price
@@ -49,3 +67,4 @@ exc_call(S0, E, T, r, sig); # exact solution
 
 mc_call(S0, E, T, r, sig, ns, nStep); # Monte Carlo simulation
 
+mc_call_var_reduc(S0, E, T, r, sig, ns, nStep);
