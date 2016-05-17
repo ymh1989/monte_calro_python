@@ -91,15 +91,15 @@ def mc_upout(S0, E, B, T, r, sig, numSim, numStep):
 S0 = 100.0; # underlying price
 E = 100.0; # strike price
 Ko = 130.0;
-Rebate = 1.0;
+Rebate = 0.0;
 T = 1.0; # maturity
 r = 0.03; # riskless interest rate
 sig = 0.3; # volatility
-ns = 10000;  # # of simulations
-dateConv = 360; # 1 year
+ns = 50000;  # # of simulations
+dateConv = 2000; # 1 year
 nStep = int(dateConv * T); # # of time steps
 
 # functions call
 exc_upout(S0, E, Ko, Rebate, T, r, sig); # exact solution
 mc_upout_vec(S0, E, Ko, T, r, sig, ns, nStep); # Monte Carlo simulation
-mc_upout(S0, E, Ko, T, r, sig, ns, nStep);
+# mc_upout(S0, E, Ko, T, r, sig, ns, nStep);
