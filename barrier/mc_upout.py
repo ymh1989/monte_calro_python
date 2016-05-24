@@ -96,7 +96,7 @@ T = 1.0; # maturity
 r = 0.03; # riskless interest rate
 sig = 0.3; # volatility
 ns = 100000;  # # of simulations
-dateConv = 2000; # 1 year
+dateConv = 360; # 1 year
 nStep = int(dateConv * T); # # of time steps
 
 # functions call
