@@ -77,7 +77,7 @@ E = 100.0; # strike price
 T = 1.0; # maturity
 r = 0.03; # riskless interest rate
 sig = 0.3; # volatility
-ns = 10000000;  # # of simulations
+ns = 1000000;  # # of simulations
 nStep = 1; # # of time steps (In this example, nStep does not have to over 1 due to European option pricing.)
 
 # functions call
