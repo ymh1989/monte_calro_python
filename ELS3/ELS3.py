@@ -13,23 +13,23 @@ S0_1 = 100.0; # underlying price 1
 S0_2 = 100.0; # underlying price 2
 S0_3 = 100.0; # underlying price 3
 T = 3.0; # maturity
-r1 = 0.0165; # riskless interest rate 1
-r2 = 0.0185; # riskless interest rate 2
-r3 = 0.0105; # riskless interest rate 3
-discr = 0.0165;
+r1 = 0.03; # riskless interest rate 1
+r2 = 0.03; # riskless interest rate 2
+r3 = 0.03; # riskless interest rate 3
+discr = 0.03;
 sig1 = 0.3; # volatility 1
-sig2 = 0.2; # volatility 2
-sig3 = 0.15; # volatility 2
+sig2 = 0.3; # volatility 2
+sig3 = 0.3; # volatility 2
 rho12 = 0.5; rho23 = 0.5; rho13 = 0.5;
-ns = 1000;  # # of simulations
+ns = 10000;  # # of simulations
 dateConv = 360; # 1 year
 nStep = int(dateConv * T); # # of time steps
 
 Kib = 60.0;
-cpy = 0.025;
+cpy = 0.03;
 dummy = cpy*T;
 face = 10000.0;
-B = [95, 90, 85, 80, 75, 70];
+B = [90.0, 90.0, 85.0, 85.0, 80.0, 80.0]; # early redemption barrier
 numExercise = len(B);
 obsDate = np.array([ceil(nStep / numExercise), ceil(2.0*nStep/numExercise), ceil(3.0*nStep/numExercise),
            ceil(4.0*nStep / numExercise), ceil(5.0*nStep / numExercise), ceil(nStep)]);
