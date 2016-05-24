@@ -25,6 +25,7 @@ def mc_call(S0, E, T, r, sig, numSim, numStep):
     t0 = time.clock();
     z = np.random.normal(size = [numSim, numStep]);
     s = S0 * np.ones([numSim]);
+    # vectorized calculation
     for j in xrange(numStep):
         s[:] = s[:] * np.exp((r - 0.5*sig**2)*dt + sig*sqrt(dt)*z[:, j]);
     payoff = np.maximum(s - E, 0);
