@@ -95,7 +95,7 @@ Rebate = 0.0;
 T = 1.0; # maturity
 r = 0.03; # riskless interest rate
 sig = 0.3; # volatility
-ns = 50000;  # # of simulations
+ns = 100000;  # # of simulations
 dateConv = 2000; # 1 year
 nStep = int(dateConv * T); # # of time steps
 
