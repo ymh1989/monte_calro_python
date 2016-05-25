@@ -21,8 +21,8 @@ As I mentioned in `Vectorization` repo, the main reason for performance of MCS i
 
 |            | European call         | Up&out call           | ELS 1-asset (Price)    | ELS 2-asset (Price)    | ELS 3-asset (Price)    |
 |------------|-----------------------|-----------------------|------------------------|------------------------|------------------------|
-| Vec MCS    | 0.0785s <p>(10<sup>6</sup> simuls)</p> | N/A                   | 11.0568s <p>(10<sup>4</sup> simuls)</p> | 45.4266s <p>(10<sup>4</sup> simuls)</p> | 68.9585s <p>(10<sup>4</sup> simuls)</p> |
-| Genera MCS | 1.2341s <p>(10<sup>6</sup> simuls)</p> | 1.7619s <p>(10<sup>5</sup> simuls)</p> | 0.6229s <p>(10<sup>4</sup> simuls)</p>  | 1.4709s <p>(10<sup>4</sup> simuls)</p>  | 2.2230s <p>(10<sup>4</sup> simuls)</p>  |
+| General MCS | 1.2341s <p>(10<sup>6</sup> simuls)</p> | 1.7619s <p>(10<sup>5</sup> simuls)</p>                   | 11.0568s <p>(10<sup>4</sup> simuls)</p> | 45.4266s <p>(10<sup>4</sup> simuls)</p> | 68.9585s <p>(10<sup>4</sup> simuls)</p> |
+| Vec MCS | 0.0785s <p>(10<sup>6</sup> simuls)</p> | N/A | 0.6229s <p>(10<sup>4</sup> simuls)</p>  | 1.4709s <p>(10<sup>4</sup> simuls)</p>  | 2.2230s <p>(10<sup>4</sup> simuls)</p>  |
 
 ###Note###
 - If you're interested in my works, please visit my [homepage](https://sites.google.com/site/yoomh1989/).
