@@ -25,4 +25,4 @@ As I mentioned in `Vectorization` repo, the main reason for performance of MCS i
 | Vec MCS | 0.0785s <p>(10<sup>6</sup> simuls)</p> | N/A | 0.6229s <p>(10<sup>4</sup> simuls)</p>  | 1.4709s <p>(10<sup>4</sup> simuls)</p>  | 2.2230s <p>(10<sup>4</sup> simuls)</p>  |
 
 ###Note###
-- If you're interested in my works, please visit my [homepage](https://sites.google.com/site/yoomh1989/).
+- If you're interested in my works, please visit my [homepage](https://sites.google.com/site/yoomh1989/) or email me(ymh1989@korea.ac.kr).
